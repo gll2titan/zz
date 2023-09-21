@@ -1,4 +1,4 @@
-def process_data():
+#def process_data():
     import streamlit as st
     import pandas as pd
     import os
@@ -112,4 +112,4 @@ def process_data():
         st.header("other")
 
 
-process_data()
+#process_data()
