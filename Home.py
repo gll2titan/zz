@@ -11,10 +11,9 @@ def home():
         """
     你需要的就在这里，脱离繁杂的事务，把功夫用在到把上——————卡卡！
     ### 看看这里！
-    - 县政府网站 [淳化县政府网站] （http://www.snchunhua.gov.cn/index.html）
+    - 县政府网站 [淳化县政府网站] http://www.snchunhua.gov.cn/index.html
     ### 点点这里？？？
-    - 全国人大网站 [中国人大网] （http://www.npc.gov.cn/npc/index.html）
- （http://www.snchunhua.gov.cn/index.html）
+    - 全国人大网站 [中国人大网] http://www.npc.gov.cn/npc/index.html
     """
     )
 
