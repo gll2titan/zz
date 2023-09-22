@@ -107,6 +107,8 @@ if __name__ == '__main__':
             message(st.session_state["generated"][i], key=str(i))
             message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
 
+main()
+
 st.markdown(
     """
     - 淳化县政府网站 http://www.snchunhua.gov.cn/index.html
