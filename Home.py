@@ -10,6 +10,17 @@ def home():
     st.markdown(
         """
     **你需要的就在这里，脱离繁杂的事务，把功夫用在到把上——————kaka！**
+
+
+
+
+
+
+
+
+
+
+
     
     - 县政府网站 [淳化县政府网站] http://www.snchunhua.gov.cn/index.html
     
