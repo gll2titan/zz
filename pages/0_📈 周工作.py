@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-tab1, tab2, tab3 = st.tabs(["# :tulip: :red[周工作表1]", ":rose: :yellow[周工作表2]", ":sunflower: :blue[周工作表3]"])
+tab1, tab2, tab3 = st.tabs([":tulip: :red[周工作表1]", ":rose: :rainbow[周工作表2]", ":sunflower: :blue[周工作表3]"])
 
 
 def insert_data(data, file_name):
