@@ -4,10 +4,12 @@ def process_data():
     import os
 
     st.markdown("# 📝 数据处理")
+    
     tab1, tab2, tab3 = st.tabs(["Excel表格纵向合并分类求和", "Excel表格横向合并", "other"])
 
     with tab1:
         st.header("纵向合并分类求和")
+        st.markdown("### 上传纵向汇总求和表格时请上传格式一致的表格，就是相同样式的表格"
 
         def merge_excel_files_h(input_files, output_file, row_number):  # excel表格合并
             data = pd.read_excel(input_files[0], header=(row_number - 1))
@@ -69,9 +71,10 @@ def process_data():
 
     with tab2:
         st.header("横向合并")
+        st.markdown("### 上传横向链接表格时请上传格式一致的表格，就是相同样式的表格"）
 
-        def merge_excel_files_h(input_files, output_file):
-            data = pd.read_excel(input_files[0])
+        def merge_excel_files_h(input_files, output_file,row_number):
+            data = pd.read_excel(input_files[0],header=(row_number - 1))
             columns_1 = st.selectbox("选择横向合并的连接列名称1", list(data.columns))
             columns_2 = st.selectbox("选择横向合并的连接列名称2", list(data.columns))
 
@@ -97,8 +100,9 @@ def process_data():
         )
         merged_file_h = "mergedA.xlsx"
         if uploaded_files_h:
+            row_number2 = st.number_input("确定合并excel列名称所在的行", value=1)
             st.write("横向合并Excel文件...")
-            merge_excel_files_h(uploaded_files_h, merged_file_h)
+            merge_excel_files_h(uploaded_files_h, merged_file_h,row_number2)
             st.write("文件合并成功!")
             st.write(merged_file_h)
             st.write("合并完成！")
