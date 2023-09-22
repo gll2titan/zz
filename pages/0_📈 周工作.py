@@ -15,7 +15,7 @@ with tab1:
     work_1 = st.text_input("单位及职务")
     phone_number_1 = st.text_input("电话")
 
-    if st.button("Submit1"):
+    if st.button("提交！"):
         data1 = [[name_1, work_1, phone_number_1]]
         file_name1 = "form_data1.csv"
         insert_data(data1, file_name1)
@@ -23,7 +23,7 @@ with tab1:
         data11 = pd.read_csv(file_name1)
         st.write(data11)
     else:
-        st.write("Form not submitted!")
+        st.write("请填写提交!")
 
 with tab2:
     name_2 = st.text_input("Name2")
