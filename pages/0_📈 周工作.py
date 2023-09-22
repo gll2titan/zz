@@ -10,12 +10,13 @@ def insert_data(data, file_name):
 
 
 with tab1:
-    name_1 = st.text_input("Name1")
-    age_1 = st.number_input("Age1")
-    phone_number_1 = st.text_input("Phone Number1")
+    '''请填写在外知名人士信息'''
+    name_1 = st.text_input("姓名")
+    work_1 = st.text_input("单位及职务")
+    phone_number_1 = st.text_input("电话")
 
     if st.button("Submit1"):
-        data1 = [[name_1, age_1, phone_number_1]]
+        data1 = [[name_1, work_1, phone_number_1]]
         file_name1 = "form_data1.csv"
         insert_data(data1, file_name1)
         st.write("Form submitted successfully!")
