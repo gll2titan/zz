@@ -76,6 +76,7 @@ def checklen(text):
 
 if __name__ == '__main__':
     # 在 Streamlit 网页上显示欢迎文本
+    
     st.markdown(":rat: :ox: :tiger2: :rabbit2: :dragon: :snake: :racehorse: :goat: :monkey: :rooster: :dog2: :pig2:")
     
     # 初始化对话历史和生成的响应列表
@@ -107,7 +108,7 @@ if __name__ == '__main__':
             message(st.session_state["generated"][i], key=str(i))
             message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
 
-main()
+#main()
 
 st.markdown(
     """
