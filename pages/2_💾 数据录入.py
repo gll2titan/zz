@@ -4,7 +4,7 @@ def in_data():
     import openpyxl
 
     st.markdown("# 💾 数据录入")
-    st.markdown(:rainbow[目前不可用,请不要使用!] :balloon:)
+    st.markdown(":rainbow[目前不可用,请不要使用!] :balloon:")
 
     def in_data_m():
         # 读取上传的Excel文件
