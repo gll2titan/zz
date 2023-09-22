@@ -9,7 +9,7 @@ def process_data():
 
     with tab1:
         st.header("纵向合并分类求和")
-        st.markdown("请上传格式一致的表格,就是相同样式的表格,默认列标题在第一行即没有表头名称")
+        st.markdown(<font color=red size=72>"请上传格式一致的表格,就是相同样式的表格,默认列标题在第一行即没有表头名称"</font>)
 
         def merge_excel_files_h(input_files, output_file, row_number):  # excel表格合并
             data = pd.read_excel(input_files[0], header=(row_number - 1))
@@ -71,7 +71,7 @@ def process_data():
 
     with tab2:
         st.header("横向合并")
-        st.markdown("### 请上传格式一致的表格，就是相同样式的表格,默认列标题在第一行即没有表头名称")
+        st.markdown("请上传格式一致的表格，就是相同样式的表格,默认列标题在第一行即没有表头名称")
 
         def merge_excel_files_h(input_files, output_file,row_number):
             data = pd.read_excel(input_files[0],header=(row_number - 1))
