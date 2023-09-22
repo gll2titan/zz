@@ -1,4 +1,6 @@
 streamlit
 pandas
 openpyxl
+websocket-client
+streamlit_chat
 playwright
