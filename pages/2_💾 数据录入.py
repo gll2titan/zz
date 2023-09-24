@@ -20,7 +20,7 @@ def in_data():
 
             # 启动Playwright控制浏览器
             with sync_playwright() as playwright:
-                browser = playwright.chromium.launch(headless=False)
+                browser = playwright.chromium.launch(headless=True)
                 context = browser.new_context()
                 page = context.new_page()
 
