@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_chat import message
+from PIL import Image
 
 import SparkApi
 
@@ -7,8 +8,8 @@ import SparkApi
 st.set_page_config(page_title="卡卡", page_icon="🦈")
 
 
-st.write("# :rainbow[欢迎你来到这里，我是kaka]")
-st.markdown("**你需要的就在这里，脱离繁杂的事务，把功夫用在到把上——————kaka！**")
+st.markdown("<center> <font color=red size=66> —欢迎你来到这里🦈我是kaka— </center> </font>",unsafe_allow_html=True)
+st.markdown("<center> 你需要的就在这里，脱离繁杂的事务，把功夫用在到把上——————kaka！</center>",unsafe_allow_html=True)
 
 # 以下密钥信息从控制台获取
 
@@ -78,7 +79,8 @@ if __name__ == '__main__':
     # 在 Streamlit 网页上显示欢迎文本
     
     st.markdown(":rat: :ox: :tiger2: :rabbit2: :dragon: :snake: :racehorse: :goat: :monkey: :rooster: :dog2: :pig2:")
-    
+    image = Image.open("./images/Solar.jpg")
+    st.image(image, use_column_width=True)
     # 初始化对话历史和生成的响应列表
     if 'generated' not in st.session_state:
         st.session_state['generated'] = []
@@ -86,7 +88,7 @@ if __name__ == '__main__':
         st.session_state['past'] = []
     
     # 获取用户输入的问题
-    user_input = st.text_input("请输入您的问题:", key='input')
+    user_input = st.chat_input("请输入您的问题:", key='input')
     
     if user_input:
         # 构造用户输入的对话信息
@@ -107,10 +109,11 @@ if __name__ == '__main__':
         for i in range(len(st.session_state['generated']) - 1, -1, -1):
             message(st.session_state["generated"][i], key=str(i))
             message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
-
+    
+    
 #main()
-
-st.markdown(
+def urlkk():
+    st.markdown(
     """
     - 淳化县政府网站 http://www.snchunhua.gov.cn/index.html
     
